@@ -15,7 +15,7 @@ namespace WpfApp19
         public event EventHandler CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
-            remove => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
         //конструктор с 2 делегатами;
         public RelayCommand(Action<object> Execute, Func<object, bool> CanExecute = null)
